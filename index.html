@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can I Run It? - Verificador de Jogos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎮 Can I Run It?</h1>
+    <p>Insira as configurações do seu PC e veja se o jogo roda!</p>
+  </header>
+
+  <main class="container">
+    <!-- Formulário de Hardware do Usuário -->
+    <section class="hardware-form">
+      <h2>Seu Hardware</h2>
+      <div class="input-group">
+        <label for="ram">Memória RAM (GB):</label>
+        <input type="number" id="ram" placeholder="Ex: 8" value="8">
+      </div>
+      <div class="input-group">
+        <label for="vram">VRAM da Placa de Vídeo (GB):</label>
+        <input type="number" id="vram" placeholder="Ex: 2" value="2">
+      </div>
+    </section>
+
+    <!-- Barra de Pesquisa de Jogo com Autocompletar -->
+    <section class="search-section">
+      <input type="text" id="game-search" list="games-list" placeholder="Digite o nome do jogo..." autocomplete="off">
+      <datalist id="games-list"></datalist>
+      <button id="btn-search">Verificar Jogo</button>
+    </section>
+
+    <!-- Resultado da Checagem -->
+    <section id="result-container" class="result-card hidden">
+      <h2 id="game-title">--</h2>
+      <img id="game-image" src="" alt="Capa do Jogo">
+      <div id="status-badge" class="badge">--</div>
+      <div class="requirements">
+        <h3>Requisitos Mínimos (RAWG):</h3>
+        <p id="game-requirements">Carregando...</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
